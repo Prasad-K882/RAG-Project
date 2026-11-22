@@ -1,0 +1,12 @@
+# PVGCOET Voice Assistant: CPU only. No torch, no database, no auth.
+# Version ranges (not exact pins) so it installs on Python 3.11 - 3.14 from prebuilt packages.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+websockets>=12
+faster-whisper>=1.0.3
+av>=15,<19          # av 19 removed an option faster-whisper still uses -> breaks microphone input
+qdrant-client>=1.11,<1.13
+ollama>=0.3.3
+noisereduce>=3.0.3
+numpy>=1.26
+scipy>=1.13

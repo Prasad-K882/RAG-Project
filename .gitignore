@@ -1,0 +1,38 @@
+# ── Python ────────────────────────────────────────────────
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# ── Downloaded programs (run_local.sh fetches these automatically) ──
+/qdrant
+/qdrant.tgz
+/piper/
+/piper.tgz
+
+# ── Qdrant database files (rebuilt by ingest.py from data/) ──
+/storage/
+/snapshots/
+/qdrant_storage/
+
+# ── Voice models (large; download separately) ─────────────
+# keep the folder, ignore everything inside it
+tts_models/*
+!tts_models/.gitkeep
+
+# ── Secrets and local config ──────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Logs and temp files ───────────────────────────────────
+*.log
+*.pid
+*.tmp
+
+# ── Editors and OS ────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
